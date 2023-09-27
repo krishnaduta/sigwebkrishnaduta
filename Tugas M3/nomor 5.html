@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilangan Fibonacci</title>
+    <script>
+        function generateFibonacci() {
+            var inputNumber = parseInt(document.getElementById("number").value);
+            var resultParagraph = document.getElementById("result");
+
+            if (isNaN(inputNumber) || inputNumber <= 0) {
+                resultParagraph.innerText = "Masukkan angka valid yang lebih besar dari 0.";
+                return;
+            }
+
+            var fibonacci = [0, 1];
+
+            while (fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2] <= inputNumber) {
+                var nextFibonacci = fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2];
+                fibonacci.push(nextFibonacci);
+            }
+
+            resultParagraph.innerText = "Bilangan Fibonacci hingga " + inputNumber + " adalah: " + fibonacci.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h1>Bilangan Fibonacci</h1>
+    <p>Masukkan angka:</p>
+    <input type="number" id="number">
+    <button onclick="generateFibonacci()">Hitung</button>
+    <p id="result"></p>
+</body>
+</html>

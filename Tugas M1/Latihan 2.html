@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Latihan 2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style Header */
+header {
+  background-color: #123;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 300px; 
+  background: #ccc;
+  padding: 30px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 40px;
+  width: 85%;
+  background-color: #f1f1f1;
+  height: 300px; 
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+img {
+  float: right;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Geodesi UGM</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Tentang Geodesi</a></li>
+      <li><a href="#">Susunan Pengurus</a></li>
+      <li><a href="#">Denah Lokasi</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Tentang Geodesi</h1>
+    <p> <img src="geodesi.jpg" style="width:170px;height:170px;margin-left:15px;"> Pengantar pada Ilmu Geodesi: Mengukur dan Memahami Bumi
+
+      Geodesi adalah cabang ilmu geosains yang berfokus pada pengukuran, pemodelan, analisis, dan pemahaman tentang bentuk, ukuran, gravitasi, dan pergerakan Bumi serta objek-objek di atasnya. Istilah "geodesi" berasal dari bahasa Yunani, di mana "geo" berarti Bumi dan "daínein" berarti membagi. Secara harfiah, geodesi merujuk pada pemahaman tentang pembagian Bumi.
+      
+      Tujuan dan Ruang Lingkup Geodesi:
+      Tujuan utama geodesi adalah untuk memahami dimensi dan bentuk Bumi dengan akurasi tinggi. Ilmu ini melibatkan pengukuran titik-titik di permukaan Bumi, pengamatan bintang dan planet, serta analisis data untuk menghasilkan model yang akurat tentang geoid (permukaan laut yang ideal) dan elipsoid (bentuk Bumi yang lebih dekat dengan bola).</p>
+   
+  </article>
+</section>
+
+<footer>
+  <p>Copyright Krishna Duta Wibisono</p>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* unvisited link */
+    a:link {
+      color: red;
+    }
+    
+    /* visited link */
+    a:visited {
+      color: rgb(0, 6, 128);
+    }
+    
+    /* mouse over link */
+    a:hover {
+      color: rgb(255, 105, 105);
+    }
+    
+    /* selected link */
+    a:active {
+      color: rgb(0, 255, 21);
+    }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 80%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+<title>Tugas 1</title>
+</head>
+<body>
+
+<h1>Praktek SIGNET Minggu-1</h1>
+<p>Praktek SIGNET Minggu ini adalah membuat sebuah halaman HTML sederhana</p>
+
+<p><b><a href="https://geodesi.ugm.ac.id/" target="_blank">Link ini akan mengarahkan anda menuju web Geodesi UGM</a></b></p>
+
+<p style="color:red;">Berikut adalah tulisan berwarna merah</p>
+<p style="color:blue;">Berikut adalah tulisan berwarna biru</p>
+<p><b> Tulisan memiliki style bold (tebal) </b><i> Tulisan memiliki style italic (miring) </i></p>
+<h2>HTML Image</h2>
+<img src="kucing.webp" alt="Trulli" width="500" height="333">
+
+<h3> TABEL DI BAWAH</h3>
+<table>
+    <tr>
+      <th>Nama Depan</th>
+      <th>Usia</th>
+    </tr>
+    <tr>
+        <td> Agus</td>
+        <td>90</td>
+    </tr>
+    <tr>
+      <td> Yoga</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td> Rudi</td>
+      <td>70</td>
+    </tr>   
+    <tr>
+    <td> Diki</td>
+    <td>60</td>
+    </tr>
+</table>
+<h3>Silakan isi form  </h3>
+<form action="/action_page.php">
+  <label for="fname">Nama Lengkap:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="address">Alamat:</label><br>
+  <input type="text" id="address" name="address" value=""><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>Data yang disubmit akan masuk pada "/action_page.php".</p>
+
+</body>
+</html>
+
+

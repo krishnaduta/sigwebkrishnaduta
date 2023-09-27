@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilangan Prima</title>
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+
+            if (num % 2 === 0 || num % 3 === 0) return false;
+
+            for (var i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+            }
+
+            return true;
+        }
+
+        function displayPrimes() {
+            var inputNumber = parseInt(document.getElementById("number").value);
+            var resultParagraph = document.getElementById("result");
+
+            if (isNaN(inputNumber) || inputNumber <= 1) {
+                resultParagraph.innerText = "Masukkan angka valid lebih dari 1.";
+                return;
+            }
+
+            var primes = [];
+
+            for (var i = 2; i <= inputNumber; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+
+            resultParagraph.innerText = "Bilangan prima dari 1 hingga " + inputNumber + " adalah: " + primes.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h1>Bilangan Prima</h1>
+    <p>Masukkan angka:</p>
+    <input type="number" id="number">
+    <button onclick="displayPrimes()">Hitung</button>
+    <p id="result"></p>
+</body>
+</html>

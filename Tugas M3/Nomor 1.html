@@ -1,0 +1,60 @@
+<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>Krishna Duta Wibisono</h2>
+<h2>21/477815/TK/52631</h2>
+<h2>Praktikum SIG WEB M3</h2>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 100px;
+    }
+</style>
+<body>
+<h2> Tugas 1</h2>
+<h3> Masukkan Bilangan Anda</h3>
+
+<input id ="angka" type ="number" placeholder ="Masukkan angka">
+<button onclick="Hitungfaktorial()">Nilai Faktorial</button>
+<p id = "demo" ></p>
+
+
+    <script>
+        function Hitungfaktorial() {
+            const bilangan  = document.getElementById("angka").value;
+            const resultElement = document.getElementById("demo");
+
+            if (bilangan === "") {
+                resultElement.textcontent = "Harap masukan angka yang benar";
+                return;
+            }
+            
+            const angka = parseInt (bilangan);
+
+            if (isNaN(angka) || angka < 0){
+                resultElement.textContent = "Harap masukan angka yang non negatif";
+                return;
+            }
+            let factorial = 1;
+            for (let i =1; i<= angka; i++) {
+                factorial *= i;
+            }
+        
+            resultElement.textContent = `Bilangan faktorial dari ${angka} adalah ${factorial}.`;
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+</body></html>
